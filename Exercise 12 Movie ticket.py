@@ -17,30 +17,30 @@ def main_routine():
             price = num_tickets * float(get_price(ticket))
             total_sales += price
             tickets_sold += num_tickets
-        elif ticket == "C":
-            student_tickets += num_tickets
         elif ticket == "S":
+            student_tickets += num_tickets
+        elif ticket == "C":
             child_tickets += num_tickets
         else:
-            ticket_wanted = input("/nDo you want to sell"
+            ticket_wanted = input("Do you want to sell"
                                   "another ticket? (Y/N): ").upper()
     print("==================================================")
     print(f"The total tickets sold today was {tickets_sold}/n"
-          f"This was made up of: /n"
-          f"/t{adult_tickets} for adults; and /n"
-          f"/t{student_tickets} for students; and /n"
-          f"/t{child_tickets} for children; and /n"
-          f"/t{gift_tickets} gift vouchers /n")
+          f"This was made up of: "
+          f"{adult_tickets} for adults;"
+          f"{student_tickets} for students;"
+          f"{child_tickets} for children;"
+          f"{gift_tickets} gift vouchers")
     print(f"Sales for the day came to ${total_sales:.2f}")
     print("==================================================")
 
 
 def sell_ticket():
-    ticket_type = input("What kind of ticket do you want: /n"
-                        "/tA for Adult, or/n"
-                        "/tS for Student, or/n"
-                        "/tC for Child, or /n"
-                        "/tG for Gift voucher/n"
+    ticket_type = input("What kind of ticket do you want: "
+                        "A for Adult,"
+                        "S for Student,"
+                        "C for Child,"
+                        "G for Gift voucher"
                         ">>").upper()
     return ticket_type
 
